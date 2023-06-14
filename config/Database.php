@@ -1,8 +1,5 @@
 <?php 
     namespace app;
-
-use PDO;
-
     class Database{
         private $conn;  
         protected static $connection = array(
