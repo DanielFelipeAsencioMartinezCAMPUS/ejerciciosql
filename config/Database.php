@@ -26,7 +26,7 @@
         public function __construct($args = []){
             $this-> conn = $args['conn'] ?? null;
         }
-        public function get_connection($dbkey) {
+        public function get_Connection($dbkey) {
             $dbConfig = self::$connection[$dbkey];
             $this->conn = null;
             $dsn = "{$dbConfig['driver']}:host={$dbConfig['host']};dbname={$dbConfig['database']}";
