@@ -1,0 +1,11 @@
+{
+    "name": "apolm01-011/ejerciciosql",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "./config",
+            "data\\" : "./models"
+        }
+    }
+}

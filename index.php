@@ -1,14 +1,11 @@
 <?php 
     require_once 'app.php';
-    include_once __DIR__.'./templates/header.php';
+    include_once __DIR__ . '/templates/header.php';
 ?>
 <main>
-    <?php 
-        include_once __DIR__. './view/pages/home.php';
-    ?>
+    <h1>hola mundo</h1>
 </main>
 
 <?php 
-    include_once __DIR__.'./templates/footer.php';
-
+    include_once __DIR__ . '/templates/footer.php';
 ?>

@@ -3,14 +3,14 @@
 
  class usedata{
     private $conn;
-    protected static $columnstbl = ['id_producto', 'name_producto'];
-    private $id_producto;
-    private $name_producto;
+    protected static $columnstbl = ['id_country', 'name_country'];
+    private $id_country;
+    private $name_country;
 
     public function __construct($args = []){    
     
-        $this-> id_producto = $args=['id_producto'];
-        $this->name_producto = $args['name_producto'];
+        $this-> id_country = $args=['id_country'];
+        $this->name_country = $args['name_country'];
     }
     public function saveData($data){
         $delimiter = ":";
@@ -22,8 +22,8 @@
         try {
             $stmt->execute($data);
             $response=[[
-                'id_producto' => self::$conn->lastInsertId(),
-                'name_producto' => $data['name_producto']
+                'id_country' => self::$conn->lastInsertId(),
+                'name_country' => $data['name_country']
             ]];
         }catch(\PDOException $e) {
             return $sql . "<br>" . $e->getMessage();
@@ -31,7 +31,7 @@
         return json_encode($response);
     }       
     public function loadAllData(){
-        $sql = "SELECT id_producto,name_producto FROM countries";
+        $sql = "SELECT id_country,name_country FROM countries";
         $stmt= self::$conn->prepare($sql);
         $stmt->execute();
         $countries = $stmt->fetchAll(\PDO::FETCH_ASSOC);

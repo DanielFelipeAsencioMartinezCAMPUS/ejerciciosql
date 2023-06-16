@@ -1,0 +1,4 @@
+-- Active: 1686658594813@@172.16.48.210@3306@daniel_asencio
+
+CREATE TABLE countries(id_country INT NOT NULL PRIMARY KEY AUTO_INCREMENT);
+ALTER TABLE countries ADD name_country VARCHAR(255) NOT NULL;
